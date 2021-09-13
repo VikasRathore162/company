@@ -1,25 +1,13 @@
-
-// student schema
 const mongoose = require('mongoose');
 const validator=require('validator');
 const userSchema = new mongoose.Schema({
     
     
     name:{
-        type:String,
-        required:false,
-        lowercase:true,
-        trim:true,
-        
-
+        type:String
     },
     username:{
-        type:String,
-        required:false,
-        lowercase:true,
-        trim:true,
-        
-
+        type:String
     },
     
     email:{
@@ -41,11 +29,18 @@ const userSchema = new mongoose.Schema({
    
    
     address:{
-        type:String,
-        required:false,
-        lowercase:true,
-        trim:true,
-        default:""
+        "street":{
+            type:String
+        },
+       "suite":{
+           type:String
+       },
+       "city":{
+           type:String
+       },
+       "zipcode":{
+           type:String
+       }
 
     }
    
